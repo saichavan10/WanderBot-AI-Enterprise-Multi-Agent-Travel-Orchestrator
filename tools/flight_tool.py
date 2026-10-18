@@ -150,7 +150,7 @@ def airport_country_matches(airport: dict, country_code: str) -> bool:
     airport_country = str(airport.get("country", "")).upper().strip()
 
     if airport_country == country_code:
-        return Truerue
+        return True
 
     try:
         country = pycountry.countries.get(alpha_2=country_code)
@@ -159,7 +159,7 @@ def airport_country_matches(airport: dict, country_code: str) -> bool:
     except Exception:
         pass
 
-    return Falsealse
+    return False
 
 
 def get_best_airport_for_country(country_code: str):
